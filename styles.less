@@ -1,0 +1,278 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-section {
+    width: 100%;
+    background: linear-gradient(45deg, #29116d, #5c4789);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 95px 18%;
+    font-size: 18px;
+
+    h2 {
+        margin: 0;
+        font-weight: bold;
+        padding: 50px 0 35px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    #img-container {
+        height: 25px;
+        background-image: url("./assets/joomag-love-wework.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (max-width: 767px) {
+            background-image: url("./assets/joomag-love-wework-mobile.svg");
+            height: 20px;
+        }
+    }
+}
+
+#trustedBy-section {
+    width: 100%;
+    text-align: center; 
+    padding: 100px 0 0 0;
+
+   /*  img {
+        height: 50px;
+    } */
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.logos-section-row{
+    padding: 50px 18% 100px 18%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .col {
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    #col1 {
+        background-image: url("./assets/walmart.svg");
+        animation-name: changeLogo1;
+    }
+    
+    #col2 {
+        background-image: url("./assets/bbb.svg");
+        animation-name: changeLogo2;
+    }
+    
+    #col3 {
+        background-image: url("./assets/levis.svg");
+        animation-name: changeLogo3;
+    }
+    
+    #col4 {
+        background-image: url("./assets/warner-brothers.svg");
+        animation-name: changeLogo4;
+    }
+    
+    #col5 {
+        background-image: url("./assets/mini.svg");
+        animation-name: changeLogo5;
+    }
+    
+    @keyframes changeLogo1 {
+        0%   { background-image: url("./assets/walmart.svg");}
+        50%  { background-image: url("./assets/jll.svg");}
+        100% { background-image: url("./assets/walmart.svg");}
+    }
+    
+    @keyframes changeLogo2 {
+        0%   { background-image: url("./assets/bbb.svg");}
+        50%  { background-image: url("./assets/ernest-brothers.svg");}
+        100% { background-image: url("./assets/bbb.svg");}
+    } 
+    
+    @keyframes changeLogo3 {
+        0%   { background-image: url("./assets/levis.svg");}
+        50%  { background-image: url("./assets/marriott.svg");}
+        100% { background-image: url("./assets/levis.svg");}
+    }
+    
+    @keyframes changeLogo4 {
+        0%   { background-image: url("./assets/warner-brothers.svg");}
+        50%  { background-image: url("./assets/costa-coffee.svg");}
+        100% { background-image: url("./assets/warner-brothers.svg");}
+    }
+    
+    @keyframes changeLogo5 {
+        0%   { background-image: url("./assets/mini.svg");}
+        50%  { background-image: url("./assets/remax.svg");}
+        100% { background-image: url("./assets/mini.svg");}
+    } 
+
+    @media (max-width: 767px) {
+        #col3, #col4, #col5 {
+            display: none;
+        }
+    
+        @keyframes changeLogo1 {
+            0%   { background-image: url("./assets/walmart.svg");}
+            25%  { background-image: url("./assets/jll.svg");}
+            50% { background-image: url("./assets/levis.svg");}
+            75% { background-image: url("./assets/costa-coffee.svg");}
+            100% { background-image: url("./assets/remax.svg");}
+        }
+    
+        @keyframes changeLogo2 {
+            0%   { background-image: url("./assets/bbb.svg");}
+            25%  { background-image: url("./assets/ernest-brothers.svg");}
+            50% { background-image: url("./assets/mini.svg");}
+            75% { background-image: url("./assets/marriott.svg");}
+            100% { background-image: url("./assets/warner-brothers.svg");}
+        }
+    }
+}
+
+#weWork-offer {
+    background-image: url("./assets/image-we-work.jpg");
+    margin-bottom: 100px;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(45deg, #29116de6, #5c4789e6);
+    }
+}
+
+#weWork-offer, 
+#weWork-offer2 {
+    height:500px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    @media (max-width: 767px) {
+        height: 600px;
+    }
+}
+
+#weWork-offer2 {
+    background: linear-gradient(45deg, #29116d, #5c4789);
+}
+
+#weWork-offer-text, 
+#weWork-offer-text2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    div {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        z-index: 10;
+
+        @media (max-width: 767px) {
+            flex-flow: column;
+            align-items: center;
+        }
+        
+        button {
+            height: 38px;
+        }
+    }
+
+    h2, h5 {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    p {
+        text-align: center;
+        font-size: smaller;
+        font-weight: lighter;
+    }
+
+    .input-group-append {
+        margin-bottom: 30px;
+    }
+}
+
+#weWork-offer-text div input {
+    margin-bottom: 30px;
+}
+
+#weWork-offer-text2 div input {
+    margin-bottom: 35px;
+}
+
+#svg1, #svg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.features {
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-row-gap: 100px;
+    padding-bottom: 100px;
+
+    .grid-item {
+        img {
+            max-height: 150px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 50px;
+                margin-right: 0!important;
+                margin-left: 0!important;
+            }
+        }
+
+        div {
+            width: 50%;
+            h2 {
+                font-weight: bolder;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    } 
+}
+
+@media (max-width: 767px) {
+    .forward {
+        flex-wrap: wrap;
+    }
+
+    .reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    .text-md-right, 
+    .text-md-left {
+        text-align: center;
+    } 
+}
